@@ -1,0 +1,21 @@
+DNADesign\Elemental\Models\ElementalArea:
+  area1:
+    Title: Page A
+  area2:
+    Title: Element A
+DNADesign\Elemental\Tests\Src\TestPage:
+  page1:
+    Title: Page 1
+    URLSegment: test-page
+    ElementalAreaID: =>DNADesign\Elemental\Models\ElementalArea.area1
+DNADesign\ElementalList\Model\ElementList:
+  listElement:
+    Title: Element 1
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.area1
+    ElementsID: =>DNADesign\Elemental\Models\ElementalArea.area2
+DNADesign\Elemental\Tests\Src\TestElement:
+  testContent:
+    TestValue: foo
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.area2
+
+
