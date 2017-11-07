@@ -12,7 +12,7 @@ use SilverStripe\ORM\FieldType\DBField;
 
 class ElementList extends BaseElement
 {
-    private static $icon = 'elemental-list/images/list.svg';
+    private static $icon = 'dnadesign/silverstripe-elemental-list:images/list.svg';
 
     private static $has_one = [
         'Elements' => ElementalArea::class
@@ -36,13 +36,17 @@ class ElementList extends BaseElement
 
     private static $description = 'Orderable list of elements';
 
+    public function getType()
+    {
+        return _t(__CLASS__ . '.BlockType', 'List');
+    }
 
     /**
      * @return DBField
      */
-    public function ElementSummary()
+    public function getSummary()
     {
-        $count = $this->Elements()->Count();
+        $count = $this->Elements()->Elements()->Count();
         $suffix = $count === 1 ? 'element': 'elements';
         $summary = $this->ListDescription ? DBField::create_field('HTMLText', $this->ListDescription)->Summary(10) . '<br />': '';
 
