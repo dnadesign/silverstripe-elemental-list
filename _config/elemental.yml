@@ -1,6 +1,6 @@
 ---
 name: elemental-list
 ---
-DNADesign/Elemental/Models/BaseElement:
+DNADesign\Elemental\Models\BaseElement:
   extensions:
-    - DNADesign/ElementalList/Extensions/BaseElementExtension
+    - DNADesign\ElementalList\Extension\BaseElementCMSEditLinkExtension

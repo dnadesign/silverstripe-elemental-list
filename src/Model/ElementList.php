@@ -52,4 +52,22 @@ class ElementList extends BaseElement
 
         return DBField::create_field('HTMLText', $summary . ' <span class="el-meta">Contains ' . $count . ' ' . $suffix . '</span>');
     }
+
+    /**
+     * Retrieve a elemental area relation name which this element owns
+     *
+     * @return string
+     */
+    public function getOwnedAreaRelationName()
+    {
+        $has_one = $this->config()->get('has_one');
+
+        foreach ($has_one as $relationName => $relationClass) {
+            if ($relationClass === ElementalArea::class && $relationName !== 'Parent') {
+                return $relationName;
+            }
+        }
+
+        return 'Elements';
+    }
 }
