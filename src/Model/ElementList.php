@@ -12,7 +12,7 @@ use SilverStripe\ORM\FieldType\DBField;
 
 class ElementList extends BaseElement
 {
-    private static $icon = 'dnadesign/silverstripe-elemental-list:images/list.svg';
+    private static $icon = 'font-icon-block-file-list';
 
     private static $has_one = [
         'Elements' => ElementalArea::class
