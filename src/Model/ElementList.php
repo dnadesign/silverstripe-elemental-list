@@ -35,6 +35,10 @@ class ElementList extends BaseElement
     private static $title = 'Group';
 
     private static $description = 'Orderable list of elements';
+    
+    private static $singular_name = 'list';
+
+    private static $plural_name = 'lists';
 
     public function getType()
     {
