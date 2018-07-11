@@ -26,6 +26,10 @@ class ElementList extends BaseElement
         'Elements'
     ];
 
+    private static $cascade_duplicates = [
+        'Elements'
+    ];
+
     private static $extensions = [
         ElementalAreasExtension::class
     ];
@@ -35,7 +39,7 @@ class ElementList extends BaseElement
     private static $title = 'Group';
 
     private static $description = 'Orderable list of elements';
-    
+
     private static $singular_name = 'list';
 
     private static $plural_name = 'lists';
