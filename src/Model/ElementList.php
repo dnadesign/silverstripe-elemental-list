@@ -78,4 +78,9 @@ class ElementList extends BaseElement
 
         return 'Elements';
     }
+
+    public function inlineEditable()
+    {
+        return false;
+    }
 }
