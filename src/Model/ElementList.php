@@ -5,9 +5,6 @@ namespace DNADesign\ElementalList\Model;
 use DNADesign\Elemental\Models\BaseElement;
 use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
-
-use SilverStripe\Core\Config\Config;
-use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\FieldType\DBField;
 
 class ElementList extends BaseElement
@@ -56,9 +53,8 @@ class ElementList extends BaseElement
     {
         $count = $this->Elements()->Elements()->Count();
         $suffix = $count === 1 ? 'element': 'elements';
-        $summary = $this->ListDescription ? DBField::create_field('HTMLText', $this->ListDescription)->Summary(10) . '<br />': '';
 
-        return DBField::create_field('HTMLText', $summary . ' <span class="el-meta">Contains ' . $count . ' ' . $suffix . '</span>');
+        return 'Contains ' . $count . ' ' . $suffix;
     }
 
     /**
