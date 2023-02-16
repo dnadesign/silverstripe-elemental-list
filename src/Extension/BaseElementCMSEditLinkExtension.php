@@ -18,13 +18,13 @@ class BaseElementCMSEditLinkExtension extends Extension
     /**
      * @param string $link
      */
-    public function updateCMSEditLink(&$link)
+    public function updateCMSEditLink(?string &$link): void
     {
         /** @var $owner BaseElement */
         $owner = $this->owner;
 
         $relationName = $owner->getAreaRelationName();
-        $page = $owner->getPage(true);
+        $page = $owner->getPage();
 
         if (!$page) {
             return;

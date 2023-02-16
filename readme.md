@@ -8,8 +8,16 @@
 
 ## Introduction
 
-Adds a new element for Elemental which allows for nested blocks. This block  allows users to nest blocks within other 
+Adds a new element for Elemental which allows for nested blocks. This block allows users to nest blocks within other
 blocks, allowing things like columns of blocks.
+
+## Requirements
+
+* Silverstripe CMS ^5.0
+* PHP ^8.1
+
+For a Silverstripe CMS ^4.2 compatible version of this module, please see the [>=1.1 releases](https://github.com/dnadesign/silverstripe-elemental-list/tree/1.1.0).
+
 
 ## Installation
 

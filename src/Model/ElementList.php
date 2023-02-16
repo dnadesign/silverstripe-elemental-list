@@ -13,39 +13,39 @@ use SilverStripe\ORM\FieldType\DBField;
  */
 class ElementList extends BaseElement
 {
-    private static $icon = 'font-icon-block-file-list';
+    private static string $icon = 'font-icon-block-file-list';
 
-    private static $has_one = [
+    private static array $has_one = [
         'Elements' => ElementalArea::class
     ];
 
-    private static $owns = [
+    private static array $owns = [
         'Elements'
     ];
 
-    private static $cascade_deletes = [
+    private static array $cascade_deletes = [
         'Elements'
     ];
 
-    private static $cascade_duplicates = [
+    private static array $cascade_duplicates = [
         'Elements'
     ];
 
-    private static $extensions = [
+    private static array $extensions = [
         ElementalAreasExtension::class
     ];
 
-    private static $table_name = 'ElementList';
+    private static string $table_name = 'ElementList';
 
-    private static $title = 'Group';
+    private static string $title = 'Group';
 
-    private static $description = 'Orderable list of elements';
+    private static string $description = 'Orderable list of elements';
 
-    private static $singular_name = 'list';
+    private static string $singular_name = 'list';
 
-    private static $plural_name = 'lists';
+    private static string $plural_name = 'lists';
 
-    public function getType()
+    public function getType(): string
     {
         return _t(__CLASS__ . '.BlockType', 'List');
     }
@@ -53,7 +53,7 @@ class ElementList extends BaseElement
     /**
      * @return DBField
      */
-    public function getSummary()
+    public function getSummary(): string
     {
         $count = $this->Elements()->Elements()->Count();
         $suffix = $count === 1 ? 'element': 'elements';
@@ -66,7 +66,7 @@ class ElementList extends BaseElement
      *
      * @return string
      */
-    public function getOwnedAreaRelationName()
+    public function getOwnedAreaRelationName(): string
     {
         $has_one = $this->config()->get('has_one');
 
@@ -79,7 +79,7 @@ class ElementList extends BaseElement
         return 'Elements';
     }
 
-    public function inlineEditable()
+    public function inlineEditable(): bool
     {
         return false;
     }
