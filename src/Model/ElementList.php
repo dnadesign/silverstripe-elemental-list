@@ -7,6 +7,10 @@ use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use SilverStripe\ORM\FieldType\DBField;
 
+/**
+ * @property int $ElementsID
+ * @method ElementalArea Elements()
+ */
 class ElementList extends BaseElement
 {
     private static $icon = 'font-icon-block-file-list';

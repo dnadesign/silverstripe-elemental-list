@@ -7,19 +7,19 @@ use SilverStripe\Dev\SapphireTest;
 
 class ElementListTest extends SapphireTest
 {
-    public function testGetRelations()
+    public function testGetRelations(): void
     {
         $list = ElementList::create();
 
         $this->assertEquals(['Elements'], $list->getElementalRelations());
     }
 
-    public function testGetCmsFields()
+    public function testGetCmsFields(): void
     {
         // todo
     }
 
-    public function testForTemplate()
+    public function testForTemplate(): void
     {
         // todo
     }

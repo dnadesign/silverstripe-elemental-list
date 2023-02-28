@@ -9,12 +9,9 @@ use SilverStripe\Control\Controller;
 use SilverStripe\Core\Extension;
 
 /**
- * Class BaseElementCMSEditLinkExtension
- *
  * BaseElement can be nested, CMSEditLink() needs to be updated to reflect that
  *
  * @property BaseElementCMSEditLinkExtension|$this $owner
- * @package DNADesign\ElementalList\Extension
  */
 class BaseElementCMSEditLinkExtension extends Extension
 {
