@@ -16,7 +16,7 @@ blocks, allowing things like columns of blocks.
 * Silverstripe CMS ^5.0
 * PHP ^8.1
 
-For a Silverstripe CMS ^4.2 compatible version of this module, please see the [>=1.1 releases](https://github.com/dnadesign/silverstripe-elemental-list/tree/1.1.0).
+For a Silverstripe CMS ^4.2 compatible version of this module, please see the [^1.1 releases](https://github.com/dnadesign/silverstripe-elemental-list/tree/1.1.0).
 
 
 ## Installation
