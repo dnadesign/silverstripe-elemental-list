@@ -33,7 +33,7 @@ class BaseElementCMSEditLinkExtension extends Extension
         if ($page instanceof ElementList) {
             // nested bock - we need to get edit link of parent block
             $link = Controller::join_links(
-                $page->CMSEditLink(),
+                $page->getCMSEditLink(),
                 'ItemEditForm/field/' . $page->getOwnedAreaRelationName() . '/item/',
                 $owner->ID
             );
