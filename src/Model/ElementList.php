@@ -39,7 +39,7 @@ class ElementList extends BaseElement
 
     private static string $title = 'Group';
 
-    private static string $description = 'Orderable list of elements';
+    private static string $class_description = 'Orderable list of elements';
 
     private static string $singular_name = 'list';
 
